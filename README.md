@@ -144,6 +144,10 @@ Agrega a tu `~/.config/sxhkd/sxhkdrc`:
 # ⛓️ Gothic Wallpaper Selector
 super + alt + w
     python3 ~/cyberpunk-wallpaper-selector/wallpaper-selector.py
+
+# Alternativo con Super + Shift + W
+super + shift + w
+    python3 ~/cyberpunk-wallpaper-selector/wallpaper-selector.py
 ```
 
 **Recuerda reiniciar sxhkd:**

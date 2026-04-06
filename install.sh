@@ -123,16 +123,23 @@ if [[ $create_desktop =~ ^[Yy]$ ]] || [[ -z $create_desktop ]]; then
     echo -e "${BLOOD}✅ Entrada de escritorio creada${NC}"
 fi
 
-# ⌨️ Opcional: Crear atajo de teclado para sxhkd (bspwm)
+# ⌨️ Opcional: Crear atajos de teclado para sxhkd (bspwm)
 echo ""
-read -p "¿Usas bspwm? ¿Agregar atajo Super+Alt+W? [y/N]: " add_shortcut
+read -p "¿Usas bspwm? ¿Agregar atajos de teclado? [y/N]: " add_shortcut
 if [[ $add_shortcut =~ ^[Yy]$ ]]; then
     if [ -d "$HOME/.config/sxhkd" ]; then
         echo "" >> ~/.config/sxhkd/sxhkdrc
         echo "# ⛓️ Gothic Wallpaper Selector" >> ~/.config/sxhkd/sxhkdrc
+        echo "# Abrir con Super + Alt + W" >> ~/.config/sxhkd/sxhkdrc
         echo "super + alt + w" >> ~/.config/sxhkd/sxhkdrc
         echo "    python3 $SCRIPT_DIR/wallpaper-selector.py" >> ~/.config/sxhkd/sxhkdrc
-        echo -e "${BLOOD}✅ Atajo de teclado agregado a sxhkdrc${NC}"
+        echo "" >> ~/.config/sxhkd/sxhkdrc
+        echo "# Abrir con Super + Shift + W (alternativo)" >> ~/.config/sxhkd/sxhkdrc
+        echo "super + shift + w" >> ~/.config/sxhkd/sxhkdrc
+        echo "    python3 $SCRIPT_DIR/wallpaper-selector.py" >> ~/.config/sxhkd/sxhkdrc
+        echo -e "${BLOOD}✅ Atajos agregados a sxhkdrc:${NC}"
+        echo -e "  ${SILVER}•${NC} Super + Alt + W"
+        echo -e "  ${SILVER}•${NC} Super + Shift + W"
         echo -e "${SILVER}⚠️  Recuerda reiniciar sxhkd:${NC} killall sxhkd && sxhkd &"
     else
         echo -e "${SILVER}⚠️ No se encontró configuración de sxhkd${NC}"
@@ -181,7 +188,8 @@ echo -e "  ${DARK}•${NC} ← →         : Navegar"
 echo -e "  ${DARK}•${NC} Enter/Space  : Aplicar"
 echo -e "  ${DARK}•${NC} Esc/Q        : Salir"
 if [[ $add_shortcut =~ ^[Yy]$ ]]; then
-    echo -e "  ${DARK}•${NC} Super+Alt+W  : Abrir selector (bspwm)"
+    echo -e "  ${DARK}•${NC} Super+Alt+W    : Abrir selector (bspwm)"
+    echo -e "  ${DARK}•${NC} Super+Shift+W  : Abrir selector alternativo"
 fi
 echo ""
 echo -e "${DARK}══════════════════════════════════════════════════════════════════${NC}"
