@@ -1,33 +1,33 @@
-# 🎨✨ Cyberpunk Wallpaper Selector ⚡
+# ⛓️🖤 Gothic Wallpaper Selector 🥀⚰️
 
 <p align="center">
-  <img src="screenshots/selector-preview.png" alt="Cyberpunk Wallpaper Selector Preview" width="800">
+  <img src="screenshots/selector-preview.png" alt="Gothic Wallpaper Selector Preview" width="800">
 </p>
 
 <p align="center">
-  <b>🖼️ Selector de wallpapers futurista con temas cyberpunk para bspwm 🖥️</b>
+  <b>🦇 Selector de wallpapers oscuro con aesthetic gótico para bspwm ⚰️</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.6+-blue.svg?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Tkinter-8.6+-orange.svg">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg">
-  <img src="https://img.shields.io/badge/Wallpapers-158%2B-purple.svg">
+  <img src="https://img.shields.io/badge/Python-3.6+-0d0d0d.svg?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Tkinter-8.6+-1a0a1f.svg">
+  <img src="https://img.shields.io/badge/License-MIT-8b0000.svg">
+  <img src="https://img.shields.io/badge/Wallpapers-158%2B-2d0a31.svg">
 </p>
 
 ---
 
-## ✨🎭 Características
+## 🕯️⛓️ Características
 
 | Feature | Descripción |
 |---------|-------------|
-| 🎨 **Interfaz Futurista** | Diseño cyberpunk con efectos glassmorphism y neon |
-| 🌈 **Integración Pywal** | Extrae colores automáticamente del wallpaper seleccionado |
+| 🖤 **Interfaz Oscura** | Diseño gótico con sombras y acentos sangre |
+| 🩸 **Integración Pywal** | Extrae colores oscuros del wallpaper seleccionado |
 | ⚡ **Rendimiento Óptimo** | Carga lazy de imágenes para respuesta instantánea |
 | ⌨️ **Atajos de Teclado** | Navegación rápida con flechas y teclas |
-| 🖥️ **Pantalla Completa** | Interfaz inmersiva fullscreen |
+| 🖥️ **Pantalla Completa** | Interfaz inmersiva en tinieblas |
 | 🔒 **Single Instance** | Evita múltiples ventanas simultáneas |
-| 🖼️ **158+ Wallpapers** | Colección incluida para empezar |
+| 🖼️ **158+ Wallpapers** | Colección oscura incluida |
 
 ---
 
@@ -39,9 +39,9 @@
 
 ---
 
-## 📋🛠️ Requisitos
+## 🗝️🛠️ Requisitos
 
-### 🔧 Dependencias del Sistema
+### 🔒 Dependencias del Sistema
 
 **🐉 Kali Linux / Debian / Ubuntu:**
 ```bash
@@ -70,7 +70,7 @@ O instálalas desde el archivo requirements:
 pip3 install -r requirements.txt
 ```
 
-### ✨ Opcionales (para tema completo)
+### ⛓️ Opcionales (para tema completo)
 
 - 🪟 **bspwm** - Window manager (recomendado)
 - 📊 **polybar** - Barra de estado (para cambio de colores)
@@ -78,9 +78,9 @@ pip3 install -r requirements.txt
 
 ---
 
-## 🚀📦 Instalación Rápida
+## ⚰️📦 Instalación Rápida
 
-### ⚡ Método 1: Instalador Automático (Recomendado)
+### 🕯️ Método 1: Instalador Automático (Recomendado)
 
 ```bash
 # 1️⃣ Clonar el repositorio
@@ -94,7 +94,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### 🛠️ Método 2: Instalación Manual
+### ⚰️ Método 2: Instalación Manual
 
 ```bash
 # Clonar repositorio
@@ -113,7 +113,7 @@ cp -r Wallpapers/* ~/Wallpapers/
 
 ---
 
-## 🎮🕹️ Uso
+## 🎮🕯️ Uso
 
 ### ▶️ Ejecutar el selector
 
@@ -127,8 +127,8 @@ python3 wallpaper-selector.py
 |-------|--------|-------|
 | `←` | Wallpaper anterior | ⬅️ |
 | `→` | Wallpaper siguiente | ➡️ |
-| `Enter` / `Space` | Aplicar tema | ✅ |
-| `Esc` / `Q` | Salir | ❌ |
+| `Enter` / `Space` | Aplicar tema | 🩸 |
+| `Esc` / `Q` | Salir | 💀 |
 
 ### 🖱️ Clic en Thumbnails
 
@@ -141,7 +141,7 @@ También puedes hacer clic en los thumbnails de abajo para navegar rápidamente 
 Agrega a tu `~/.config/sxhkd/sxhkdrc`:
 
 ```bash
-# 🎨 Cyberpunk Wallpaper Selector
+# ⛓️ Gothic Wallpaper Selector
 super + alt + w
     python3 ~/cyberpunk-wallpaper-selector/wallpaper-selector.py
 ```
@@ -155,7 +155,7 @@ killall sxhkd && sxhkd &
 
 ## 📁🖼️ Wallpapers Incluidos
 
-Este repositorio incluye **158+ wallpapers** de alta calidad. Una selección de muestra está en la carpeta `Wallpapers/`.
+Este repositorio incluye **158+ wallpapers** oscuros de alta calidad. Una selección de muestra está en la carpeta `Wallpapers/`.
 
 **Para ver la lista completa:** [`wallpapers-list.txt`](wallpapers-list.txt)
 
@@ -172,7 +172,7 @@ cp /ruta/a/tus/wallpapers/*.jpg ~/Wallpapers/
 ## 🏗️📂 Estructura del Proyecto
 
 ```
-📦 cyberpunk-wallpaper-selector/
+📦 gothic-wallpaper-selector/
 ├── 🐍 wallpaper-selector.py          # Aplicación principal
 ├── 📜 themes                          # Script para pywal
 ├── 📋 requirements.txt                # Dependencias Python
@@ -180,29 +180,32 @@ cp /ruta/a/tus/wallpapers/*.jpg ~/Wallpapers/
 ├── 🖥️ wallpaper-selector.desktop      # Entrada de escritorio
 ├── 📸 screenshots/                    # Capturas de pantalla
 │   └── selector-preview.png
-├── 🖼️ Wallpapers/                    # Colección de wallpapers
+├── 🖼️ Wallpapers/                    # Colección oscura
 │   ├── 1000054530.jpg
 │   ├── 1042669.jpg
 │   └── ...
 ├── 📄 wallpapers-list.txt             # Lista completa de wallpapers
 ├── 📄 README.md                       # Este archivo
-├── 📄 LICENSE                           # Licencia MIT
-└── 🚫 .gitignore                        # Ignorar archivos temporales
+├── 📄 LICENSE                         # Licencia MIT
+└── 🚫 .gitignore                      # Ignorar archivos temporales
 ```
 
 ---
 
 ## 🎨✏️ Personalización
 
-### 🌈 Cambiar Colores
+### 🌙 Cambiar Colores
 
 Edita las variables de color en `wallpaper-selector.py`:
 
 ```python
-self.bg_color = '#050505'      # ⚫ Fondo
-self.neon_cyan = '#00f0ff'     # 🩵 Cyan neón
-self.neon_pink = '#ff00ff'     # 💗 Rosa neón
-self.neon_purple = '#9d00ff'   # 💜 Púrpura neón
+self.bg_color = '#0a0a0a'        # ⚫ Void black
+self.blood_red = '#8b0000'       # 🩸 Dark blood red
+self.dark_crimson = '#4a0000'    # 🥀 Crimson shadow
+self.void_purple = '#2d0a31'     # 🌙 Void purple
+self.obsidian = '#1a1a1a'        # ⛓️ Obsidian gray
+self.silver = '#8a8a8a'          # 🗝️ Dark silver
+self.bone_white = '#c0c0c0'      # 🦴 Bone white
 ```
 
 ### 📏 Ajustar Tamaño de Thumbnails
@@ -215,7 +218,7 @@ self.thumb_h = int(self.sh * 0.10)  # 📐 10% de la altura de pantalla
 
 ## 🔧🛠️ Solución de Problemas
 
-### ❌ Error: `No module named 'tkinter'`
+### 🖤 Error: `No module named 'tkinter'`
 
 ```bash
 # 🐉 Kali/Ubuntu/Debian
@@ -225,19 +228,19 @@ sudo apt install python3-tk
 sudo pacman -S tk
 ```
 
-### ❌ Error: `No module named 'PIL'`
+### 🖤 Error: `No module named 'PIL'`
 
 ```bash
 pip3 install Pillow
 ```
 
-### ❌ Error: `wal: command not found`
+### 🖤 Error: `wal: command not found`
 
 ```bash
 pip3 install pywal
 ```
 
-### ❌ El selector no abre
+### 🖤 El selector no abre
 
 Verifica que tienes imágenes en `~/Wallpapers`:
 ```bash
@@ -255,32 +258,32 @@ cp -r ~/cyberpunk-wallpaper-selector/Wallpapers/* ~/Wallpapers/
 
 1. 🍴 Fork el repositorio
 2. 🌿 Crea una rama (`git checkout -b feature/nueva-caracteristica`)
-3. 💾 Commit tus cambios (`git commit -am '✨ Agrega nueva característica'`)
+3. 💾 Commit tus cambios (`git commit -am '⛓️ Agrega nueva característica'`)
 4. 📤 Push a la rama (`git push origin feature/nueva-caracteristica`)
 5. 🔄 Abre un Pull Request
 
 ---
 
-## 📄⚖️ Licencia
+## 📄⚰️ Licencia
 
 Este proyecto está licenciado bajo **MIT License** - ver el archivo [LICENSE](LICENSE) para detalles.
 
 ---
 
-## 🙏💜 Créditos
+## 🙏🖤 Créditos
 
-- 🎨 Diseño cyberpunk inspirado en interfaces futuristas
-- 🌈 Integración con [pywal](https://github.com/dylanaraps/pywal) para extracción de colores
-- 🖥️ Desarrollado para entornos **bspwm/polybar**
-- ✨ Creado con pasión por **sos4boyz**
+- 🦇 Diseño gótico inspirado en aesthetics oscuros
+- 🩸 Integración con [pywal](https://github.com/dylanaraps/pywal) para extracción de colores
+- ⚰️ Desarrollado para entornos **bspwm/polybar**
+- ⛓️ Creado en las tinieblas por **sos4boyz**
 
 ---
 
 <p align="center">
-  <b>Desarrollado con 💜 y mucho código</b><br>
-  <i>⚡ Cyberpunk Wallpaper Selector v1.0 ⚡</i>
+  <b>Desarrollado en la oscuridad con 🖤 y código</b><br>
+  <i>⛓️ Gothic Wallpaper Selector v1.0 ⛓️</i>
 </p>
 
 <p align="center">
-  🌟 <b>Star este repo si te gustó!</b> 🌟
+  🦇 <b>Star este repo si te gustó!</b> 🦇
 </p>

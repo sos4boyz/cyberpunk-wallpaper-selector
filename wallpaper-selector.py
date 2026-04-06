@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Cyberpunk Wallpaper Selector for bspwm
-Futuristic glassmorphism interface with neon accents
+⛓️ Gothic Wallpaper Selector for bspwm ⛓️
+Dark aesthetic interface with blood & shadow accents 🖤
 """
 
 import tkinter as tk
@@ -56,16 +56,18 @@ if not acquire_lock():
 class CyberWallpaperSelector:
     def __init__(self, root):
         self.root = root
-        self.root.configure(bg='#050505')
+        self.root.configure(bg='#0a0a0a')
         self.root.attributes('-fullscreen', True)
 
-        # Colors - Cyberpunk theme
-        self.bg_color = '#050505'
-        self.neon_cyan = '#00f0ff'
-        self.neon_pink = '#ff00ff'
-        self.neon_purple = '#9d00ff'
-        self.text_color = '#ffffff'
-        self.dim_color = '#1a1a2e'
+        # ⛓️ Colors - Gothic/Dark theme ⛓️
+        self.bg_color = '#0a0a0a'        # ⚫ Deep void black
+        self.blood_red = '#8b0000'       # 🩸 Dark blood red
+        self.dark_crimson = '#4a0000'  # 🥀 Crimson shadow
+        self.void_purple = '#2d0a31'    # 🌙 Void purple
+        self.obsidian = '#1a1a1a'        # ⛓️ Obsidian gray
+        self.silver = '#8a8a8a'          # 🗝️ Dark silver
+        self.bone_white = '#c0c0c0'      # 🦴 Bone white
+        self.text_color = '#e0e0e0'     # 🖤 Soft white
 
         # Performance tracking
         self._last_thumb_range = (-1, -1)
@@ -246,7 +248,7 @@ class CyberWallpaperSelector:
         # Decorative top line
         top_line = tk.Canvas(self.root, height=2, bg=self.bg_color, highlightthickness=0)
         top_line.place(x=0, y=20, relwidth=1)
-        top_line.create_line(0, 1, self.sw, 1, fill=self.neon_cyan, width=2)
+        top_line.create_line(0, 1, self.sw, 1, fill=self.blood_red, width=2)
 
         # Title with glow effect
         title_frame = tk.Frame(self.root, bg=self.bg_color)
@@ -254,20 +256,20 @@ class CyberWallpaperSelector:
 
         self.title = tk.Label(
             title_frame,
-            text="◢ WALLPAPER SELECTOR ◣",
+            text="⛓️ WALLPAPER SELECTOR ⛓️",
             font=self.font_title,
             bg=self.bg_color,
-            fg=self.neon_cyan
+            fg=self.blood_red
         )
         self.title.pack()
 
         # Subtitle
         self.subtitle = tk.Label(
             title_frame,
-            text="「 Select your environment 」",
+            text="🥀 Embrace the darkness 🥀",
             font=self.font_sub,
             bg=self.bg_color,
-            fg=self.neon_purple
+            fg=self.void_purple
         )
         self.subtitle.pack()
 
@@ -320,7 +322,7 @@ class CyberWallpaperSelector:
             text="",
             font=self.font_counter,
             bg=self.bg_color,
-            fg=self.neon_cyan
+            fg=self.blood_red
         )
         self.counter_lbl.pack(pady=10)
 
@@ -337,21 +339,21 @@ class CyberWallpaperSelector:
         nav_frame.pack(pady=10)
 
         # Left arrow
-        self.btn_prev = self.create_neon_button(nav_frame, '◀ PREV', self.prev, self.neon_purple)
+        self.btn_prev = self.create_neon_button(nav_frame, '◀ PREV', self.prev, self.void_purple)
         self.btn_prev.pack(side=tk.LEFT, padx=20)
 
         # Apply button (prominent)
-        self.btn_apply = self.create_neon_button(nav_frame, '▶ APPLY THEME ◀', self.apply, self.neon_cyan, large=True)
+        self.btn_apply = self.create_neon_button(nav_frame, '▶ APPLY THEME ◀', self.apply, self.blood_red, large=True)
         self.btn_apply.pack(side=tk.LEFT, padx=30)
 
         # Right arrow
-        self.btn_next = self.create_neon_button(nav_frame, 'NEXT ▶', self.next, self.neon_purple)
+        self.btn_next = self.create_neon_button(nav_frame, 'NEXT ▶', self.next, self.void_purple)
         self.btn_next.pack(side=tk.LEFT, padx=20)
 
         # Bottom instructions
         inst = tk.Label(
             self.root,
-            text="[←] PREVIOUS  [→] NEXT  [ENTER] APPLY  [ESC] EXIT",
+            text="🖤 [←] PREVIOUS  [→] NEXT  [ENTER] APPLY  [ESC] EXIT 🖤",
             font=('Consolas', 10),
             bg=self.bg_color,
             fg='#333333'
@@ -361,12 +363,12 @@ class CyberWallpaperSelector:
         # Bottom neon line
         bot_line = tk.Canvas(self.root, height=2, bg=self.bg_color, highlightthickness=0)
         bot_line.place(x=0, y=self.sh-20, relwidth=1)
-        bot_line.create_line(0, 1, self.sw, 1, fill=self.neon_pink, width=2)
+        bot_line.create_line(0, 1, self.sw, 1, fill=self.dark_crimson, width=2)
 
     def add_corners(self, frame):
         """Add cyberpunk corner decorations"""
         size = 15
-        color = self.neon_cyan
+        color = self.blood_red
 
         # We'll draw corners on a canvas behind the image
         w = self.main_w + 40
@@ -526,11 +528,11 @@ class CyberWallpaperSelector:
                     widget['label'].image = None
 
             # Update border color
-            border_color = self.neon_cyan if is_selected else '#333333'
+            border_color = self.blood_red if is_selected else '#333333'
             border_pad = 2 if is_selected else 0
             if widget['border'].cget('bg') != border_color:
                 widget['border'].config(bg=border_color, padx=border_pad, pady=border_pad)
-                widget['label'].config(fg=self.neon_cyan if is_selected else '#666666')
+                widget['label'].config(fg=self.blood_red if is_selected else '#666666')
 
             widget['container'].pack(side=tk.LEFT, padx=5)
 
@@ -560,7 +562,7 @@ class CyberWallpaperSelector:
         # Visual feedback
         self.btn_apply.winfo_children()[0].config(
             text='◈ APPLYING... ◈',
-            bg=self.neon_cyan,
+            bg=self.blood_red,
             fg='#000000'
         )
         self.root.update()
@@ -569,19 +571,19 @@ class CyberWallpaperSelector:
             subprocess.run(['themes', str(wp)], check=True, capture_output=True)
             self.filename_lbl.config(
                 text=f"✓ {wp.name}",
-                fg=self.neon_cyan
+                fg=self.blood_red
             )
         except Exception as e:
             self.filename_lbl.config(
                 text=f"✗ Error: {e}",
-                fg=self.neon_pink
+                fg=self.dark_crimson
             )
 
         # Reset button
         self.root.after(1500, lambda: self.btn_apply.winfo_children()[0].config(
             text='▶ APPLY THEME ◀',
             bg='#0a0a0f',
-            fg=self.neon_cyan
+            fg=self.blood_red
         ))
         self.root.after(1500, lambda: self.filename_lbl.config(fg=self.text_color))
 
